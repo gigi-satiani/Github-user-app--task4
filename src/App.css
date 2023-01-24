@@ -1,38 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.bigDaddyDiv {
+  width: 730px;
+  display: flex;
+  flex-direction: column;
+}
+.headerParent {
+  width: 100%;
+}
+/*---- devfinder & light / dark ----*/
+.darkLightMode {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+.darkLightMode span {
+  font-family: cursive;
+  font-size: 25px;
+  font-weight: 600;
+}
+/*---- search & submit ----*/
+.searchParent {
+  width: 730px;
+  height: 75px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-top: 25px;
+  border-radius: 20px;
+}
+.searchInputParent {
+  display: flex;
+  width: 100%;
+  padding-left: 15px;
+}
+.searchInputParent input[type=search] {
+  border: none;
+  width: 70%;
+  background: transparent;
+  outline: none;
+  padding-left: 20px;
+  font-size: 16px;
+  font-family: monospace;
+}
+.searchInputParent input[type=search]::placeholder {
+  letter-spacing: 1px;
+  font-weight: lighter;
+  font-size: 15px;
+}
+.figureParent {
+  width: 5%;
+}
+.figureParent img {
+  width: 100%;
+}
+.submitParent {
+  width: 120px;
+  text-align: right;
+}
+.submitParent button {
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #0079FF;
+  font-weight: 400;
+  letter-spacing: 1.3px;
+  color: #fff;
+}
+.submitParent button:hover {
+  background-color: #60ABFF;
 }
 
-.App-link {
-  color: #61dafb;
+/*----media style----*/
+
+.mainParent {
+  width: 730px;
+  height: 390px;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.imgAndBioParent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+.imgParent {
+  width: 20%;
+  position: relative;
+}
+.imgParent img {
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  margin: 20px 0 0 30px;
+}
+.userBioParent {
+  width: 80%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+.oqtoDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 30px;
+}
+.oqtoDiv h2 {
+  font-size: 23px;
+  font-family: monospace;
+}
+.oqtoDiv span {
+  color: #0079FF;
+  padding-top: 5px;
+  font-family: monospace;
+}
+.joinDate {
+  font-family: monospace;
+}
+.userBio {
+  width: 80%;
+  font-weight: 100;
+  font-size: 15px;
+  padding: 15px 0 0 45px;
+  overflow: hidden;
+  color: #FFFFFF;
+}
+.userBio span {
+  font-weight: 100;
+  font-family: monospace;
+  letter-spacing: 1px;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*----followers/following tab ----*/
+
+.followerNumbersParent {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+}
+.flexContainer {
+  width: 80%;
+  padding: 20px;
+  line-height: 25px;
+  border-radius: 15px;
+}
+.followers {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 200;
+  font-family: monospace;
+  display: flex;
+  justify-content: space-around;
+}
+.followers span, .numbers span {
+  width: 100%;
+}
+.numbers {
+  width: 100%;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: monospace;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* --- adress/links/socials --- */
+
+.linksParent {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+.linksContainer {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  word-spacing: 2px;
+  font-family: monospace;
+}
+.linksContainer div {
+  flex: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.linksContainer div img {
+  padding-right: 8px;
+}
+.linksContainer span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*----media style mob----*/
+
+@media screen and (max-width: 460px) {
+  .bigDaddyDiv {
+    padding: 15px;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .mainParent {
+    width: 100%;
+    height: 100%;
+  }
+  .flexContainer, .searchParent {
+      width: 100%;
+  }
+  .userBio {
+    width: 100%;
+    padding: 15px 0 0 0;
+  }
+  .linksContainer {
+      width: 100%;
+      align-items: flex-end;
+  }
+  .linksContainer div {
+      flex: 100%;
+  }
+  .userBioParent {
+      flex-direction: column;
+  }
+  .imgParent img {
+      width: 80px;
+      margin: 0;
+  }
+  .joinDate {
+      padding-left: 30px;
+      text-align: initial;
+  }
+  .figureParent img {
+    width: 25px;
+  }
+  .searchInputParent {
+    padding: 0;
+  }
+  .searchInputParent input[type=search] {
+    width: 100%;
+  }
+  .searchInputParent input[type=search]::placeholder {
+    font-size: 12px;
+  }
+  .followers  {
+    font-size: 12px;
+    text-align: center;
+  }
+  .numbers {
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+/*----media style lapt----*/
+
+@media screen and ((max-width: 750px) and (min-width: 460px)) {
+  .bigDaddyDiv {
+    padding: 15px;
+    width: 90%;
+  }
+  .searchParent, .mainParent {
+    width: 100%;
+  }
+  .followerNumbersParent {
+    align-items: center;
+  }
+  .flexContainer, .linksContainer {
+    width: 95%;
+  }
+  .imgParent img {
+    margin: 0;
+    width: 80px;
+  }
+  .userBio {
+    width: 95%;
+    padding: 15px 0 0 0;
   }
 }
