@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import "./App.css";
+import React, { useState } from "react";
 import Header from "./components/header";
 import Main from "./components/mainBody";
 import { ThemeProvider } from "styled-components";
@@ -20,14 +20,14 @@ export const darkTheme = {
 
 function App() {
   const [theme, setTheme] = useState("light");
-  const [data, setData] = useState('');
+  const [data, setData] = useState("");
 
   function findUser() {
     const findUserName = document.querySelector(".searchInput").value;
     fetch(`https://api.github.com/users/${findUserName}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data, 'dataa')
+        console.log(data, "dataa");
         return setData(data);
       });
   }
@@ -35,9 +35,15 @@ function App() {
   return (
     <ThemeProvider theme={theme === "light" ? darkTheme : lightTheme}>
       <GlobalStyle />
+
       <div className="App">
         <div className="bigDaddyDiv">
-          <Header theme={theme} setTheme={setTheme} findUser={findUser} data={data} />
+          <Header
+            theme={theme}
+            setTheme={setTheme}
+            findUser={findUser}
+            data={data}
+          />
           <Main theme={theme} setTheme={setTheme} data={data} />
         </div>
       </div>
