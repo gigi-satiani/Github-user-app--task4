@@ -30,7 +30,7 @@ const Main = (props) => {
           <div className="oqtoDiv">
             <h2>
               {props.data === ""
-                ? "the Oqocat"
+                ? "the Octocat"
                 : props.data.message
                 ? "Not avaliable"
                 : props.data.name === null
@@ -39,7 +39,7 @@ const Main = (props) => {
             </h2>
             <span>
               {props.data === ""
-                ? "@oqocat"
+                ? "@octocat"
                 : props.data.message
                 ? "Not avaliable"
                 : props.data.email === null
